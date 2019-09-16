@@ -2,3 +2,10 @@ redvan:
   name: "Redvan"
   email: "redvanisation@example.com"
   password_digest: <%= User.digest("password") %>
+
+<% 40.times do |n| %>
+user_<%= n %>:
+  name: <%= "User-#{n}" %>
+  email: <%= "user-#{n}@example.com" %>
+  password_digest: <%= User.digest("password") %>
+<% end %>
